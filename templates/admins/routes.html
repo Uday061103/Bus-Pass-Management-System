@@ -1,0 +1,32 @@
+<h1>Route List</h1>
+<a href="{% url 'add_route' %}">Add New Route</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Start Point</th>
+            <th>End Point</th>
+            <th>Distance (km)</th>
+            <th>Fare (INR)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for route in routes %}
+            <tr>
+                <td>{{ route.start_point }}</td>
+                <td>{{ route.end_point }}</td>
+                <td>{{ route.distance }}</td>
+                <td>{{ route.fare }}</td>
+                <td>
+                    <a href="{% url 'edit_route' route.pk %}">Edit</a> |
+                    <a href="#">Delete</a>  <!-- You can add delete functionality later -->
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="5">No routes available</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

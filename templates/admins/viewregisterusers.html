@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUS PASS | ADMIN HOME</title>
+  <link rel="stylesheet" href="{% static 'css/studentregistration.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Main Section Styling */
+
+    /* Additional styles */
+    .highlighted-email {
+      color: #007bff;
+      font-weight: bold;
+      margin-left: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border-top: 1px solid #ccc;
+      margin-top: auto;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: #f8f9fa;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .navbar img {
+      width: 50px;
+      margin-right: 20px;
+    }
+
+    .navbar-title {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .navbar .home,
+    .navbar .logout {
+      margin-left: auto;
+      text-decoration: none;
+      color: #007bff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .logout {
+      display: flex;
+      align-items: center;
+      background-color: #e2e6ea;
+    }
+
+    .navbar .logout:hover {
+      background-color: #d6d8db;
+    }
+
+    .welcome-message {
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      width: 120px;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .button:hover {
+      background-color: #e2e6ea;
+    }
+
+    .button i {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .we-do {
+      padding: 50px 0;
+      background-color: #f4f4f9;
+    }
+
+    .we-do-details {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .section-header p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: #f9f9f9;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f1f1;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+
+    .btn-link {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-link:hover {
+      background-color: #e0f7fa;
+      color: #00796b;
+    }
+
+    .bg-light {
+      background-color: #f1f1f1;
+      border-radius: 8px;
+    }
+
+    .bg-light th,
+    .bg-light td {
+      border: 1px solid #ddd;
+    }
+
+    .section-header p {
+      margin-top: 15px;
+    }
+
+    .highlight-status {
+      background-color: #ffeb3b;
+      /* Bright yellow background */
+      color: #000;
+      /* Black text for better readability */
+      font-weight: bold;
+      /* Make the text bold */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <img src="{% static 'img/CBIT3.JPG' %}" alt="Smart Bus Pass" class="navbar-icon">
+    <h2 class="navbar-title"><a href="{% url 'base' %}">SMART BUS PASS</a></h2>
+    <!-- <a href="{% url 'base' %}" class="home">HOME</a> -->
+    <div class="welcome-message">
+      {% if user_name %}
+      <span class="highlighted-email">Welcome, {{ user_name }}!</span><br>
+      {% else %}
+      <span>Please log in</span>
+      {% endif %}
+    </div>
+
+    <a href="{% url 'logoutfun' %}" class="logout">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+
+  </div>
+  <div class="container mt-4" style="flex-grow: 1; text-align: center;">
+    <br><br>
+    <h2>Welcome To Admin Home Page</h2>
+    <div class="button-container">
+      <a href="{%url 'AdminHome'%}" class="button">
+        <i class="fas fa-home"></i>
+        Home
+      </a>
+      <a href="{% url 'RegisterUsersView' %}" class="button">
+        <i class="fas fa fa-address-card"></i>
+        Registred Users
+      </a>
+
+      <a href="#" class="button">
+        <i class="fas fa-print"></i>
+        Print Application
+      </a>
+      <a href="#" class="button">
+        <i class="fas fa-search"></i>
+        Track Application
+      </a>
+    </div>
+  </div>
+
+  <section class="we-do">
+    <div class="container">
+      <div class="we-do-details">
+        <div class="section-header text-center">
+          <center><h2>View Registered Users</h2></center>
+          <p>
+          <table class="table table-bordered bg-light text-dark">
+            <thead>
+              <tr style="color:red;font-weight:bold;">
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Status</th>
+                <th>Activate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in data %}
+              <tr style="color: Green">
+                <td style="font-weight: bold;">{{ forloop.counter }}</td>
+                <td style="font-weight: bold;">{{ i.name }}</td>
+                <td style="font-weight: bold;">{{ i.email }}</td>
+                <td style="font-weight: bold;">{{ i.mobile }}</td>
+                <td style="{% if i.status == 'waiting' %}color: red; font-weight: bold;{% elif i.status == 'activated' %}color: green; font-weight: bold;{% endif %}">{{ i.status }}</td>               
+                {% if i.status == 'waiting' %}
+                <td><a class="btn-link" href="{% url 'ActivaUsers' %}?uid={{ i.id }}" style="color:DARKBLUE">Activate</a></td>
+                {% else %}
+                <td><a class="btn-link" href="{% url 'deActivaUsers' %}?uid={{ i.id }}" style="color:red">Deactivate</a></td>
+              
+                {% endif %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          </p>
+        </div><!--/.section-header-->
+      </div><!--/.we-do-details-->
+    </div><!--/.container-->
+  </section><!--/.we-do-->
+  <footer class="footer">
+    <span>&copy; Smart Bus Pass. All rights reserved.</span>
+  </footer>
+
+</body>
+
+</html>
