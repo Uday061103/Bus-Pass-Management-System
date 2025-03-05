@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'students',
     'depo_manger',
     'admins',
+    'buspassmanagment',
 ]
 
 
