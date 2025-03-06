@@ -73,7 +73,12 @@ TEMPLATES = [
     },
 ]
 
+
+# gunicorn buspassmangment.wsgi:application
+
 WSGI_APPLICATION = 'buspassmangment.wsgi.application'
+
+
 
 
 # Database
