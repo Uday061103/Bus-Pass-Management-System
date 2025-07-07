@@ -103,7 +103,7 @@ toml==0.10.2
 tornado==6.4.2
 tqdm==4.67.1
 transformers==4.46.3
-typing-extensions==4.13.2
+typing-extensions>=4.3.0,<5
 tzdata==2025.1
 urllib3==2.2.3
 watchdog==4.0.2
