@@ -159,9 +159,9 @@ body {
   
   .get-started-btn:hover {
     background: #ffbb38;
-    color: #fff;
+    color: #343a40;
   }
-  
+
   @media (max-width: 992px) {
     .get-started-btn {
       padding: 7px 20px 8px 20px;
@@ -215,7 +215,7 @@ body {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color:#fff;
+    color: #343a40;
   }
   
   .navbar .dropdown ul {

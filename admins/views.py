@@ -85,4 +85,3 @@ def edit_route(request, pk):
     else:
         form = RouteForm(instance=route)
     return render(request, 'admins/route_form.html', {'form': form})
-    

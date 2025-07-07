@@ -230,23 +230,14 @@
         Registred Users
       </a>
 
-      <!-- <a href="{% url 'search_bus_pass' %}" class="button">
+      <a href="#" class="button">
         <i class="fas fa-print"></i>
         Print Application
       </a>
       <a href="#" class="button">
         <i class="fas fa-search"></i>
         Track Application
-      </a> -->
-
-      <a href="{%url 'add_route'%}" class="button">
-        <i class="fas fa-print"></i>
-        Add Routes
-    </a>
-    <a href="{%url 'viewroutes'%}" class="button">
-        <i class="fas fa-search"></i>
-        Routes List
-    </a>
+      </a>
     </div>
   </div>
 
@@ -274,7 +265,7 @@
                 <td style="font-weight: bold;">{{ i.name }}</td>
                 <td style="font-weight: bold;">{{ i.email }}</td>
                 <td style="font-weight: bold;">{{ i.mobile }}</td>
-                <td id="{% if i.status == 'waiting' %}color: red; font-weight: bold;{% elif i.status == 'activated' %}color: green; font-weight: bold;{% endif %}">{{ i.status }}</td>               
+                <td style="{% if i.status == 'waiting' %}color: red; font-weight: bold;{% elif i.status == 'activated' %}color: green; font-weight: bold;{% endif %}">{{ i.status }}</td>               
                 {% if i.status == 'waiting' %}
                 <td><a class="btn-link" href="{% url 'ActivaUsers' %}?uid={{ i.id }}" style="color:DARKBLUE">Activate</a></td>
                 {% else %}
