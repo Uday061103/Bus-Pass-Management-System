@@ -1,8 +1,23 @@
+# === Python ===
 __pycache__/
 *.py[cod]
-*.sqlite3
 *.log
+*.sqlite3
+*.db
 *.exe
+
+# === VS Code ===
+.vscode/
+
+# === OS/System ===
+.DS_Store
+Thumbs.db
+
+# === Media/Generated Files ===
 media/
-*.png
-*.jpg
+staticfiles/
+
+# === PDFs/Temp files ===
+*.pdf
+*.bak
+*.tmp
