@@ -1,5 +1,5 @@
 absl-py==2.1.0
-altair==5.4.1
+altair
 asgiref==3.8.1
 astunparse==1.6.3
 attrs==25.3.0
@@ -33,7 +33,7 @@ grpcio-status==1.62.3
 gTTS==2.5.4
 gunicorn==23.0.0
 h5py==3.11.0
-huggingface-hub==0.30.2
+huggingface-hub
 idna==3.10
 importlib_metadata==8.5.0
 importlib_resources==6.4.5
@@ -73,7 +73,7 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 pytz==2025.2
 PyYAML==6.0.2
-qrcode==7.4.2
+qrcode
 referencing==0.35.1
 regex==2024.11.6
 reportlab==4.3.1
@@ -88,13 +88,13 @@ scipy==1.10.1
 seaborn==0.13.2
 six==1.17.0
 smmap==5.0.2
-SpeechRecognition==3.10.4
+SpeechRecognition
 sqlparse==0.5.3
-streamlit==1.40.1
+streamlit
 tenacity==9.0.0
 tensorboard==2.13.0
 tensorboard-data-server==0.7.2
-tensorflow==2.13.0
+tensorflow
 tensorflow-estimator==2.13.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
