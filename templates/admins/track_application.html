@@ -1,0 +1,11 @@
+<h2>Track Application Status</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="email">Enter Email:</label>
+    <input type="email" name="email" required>
+    <button type="submit">Track</button>
+</form>
+
+{% if status %}
+    <h3>Status: {{ status }}</h3>
+{% endif %}

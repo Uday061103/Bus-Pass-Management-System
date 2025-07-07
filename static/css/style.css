@@ -81,7 +81,7 @@ h6 {
   z-index: 9999;
   overflow: hidden;
   background: #151515;
-}f
+}
 
 #preloader:before {
   content: "";
@@ -407,7 +407,7 @@ h6 {
 #hero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/CBIT.JPG");
+  background: url("../img/CBIT.jpg");
   
   /* background-size: cover; */
   background-repeat: no-repeat;
